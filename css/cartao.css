@@ -19,20 +19,22 @@
 .cartao.cartao--focado,
 .cartao:hover,
 .cartao:focus {
+	border: 2px #9b870c solid;
 	transform: scale(1.1);
 	z-index: 2;
 }
 
-/*.cartao .opcoesDoCartao-opcao {
+.cartao .opcoesDoCartao-opcao {
 	opacity: 0;
 	transition: opacity .2s ease;
 }
 
-.cartao:focus .opcoesDoCartao-opcao,
+.cartao:hover .opcoesDoCartao-opcao,
 .cartao--focado .opcoesDoCartao-opcao{
+	/* border: 2px black solid; */
 	opacity: 1;
 }
-*/
+
 
 
 .cartao-conteudo {

@@ -27,3 +27,23 @@
 		font-size: 1.3rem;
 	}
 }
+
+.muralLinhas {
+	flex-direction: row;
+}
+
+.muralColunas {
+	flex-direction: column;
+}
+
+.muralLinhas cartao{
+	flex-basis: 190px;
+	width: auto;
+	display: "block";
+}
+
+.muralColunas cartao{
+	flex-basis: auto;
+	width: 100%;
+	display: "block";
+}
