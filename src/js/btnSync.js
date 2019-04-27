@@ -13,9 +13,8 @@
             usuario: "dav-holl@hotmail.com"
             ,cartoes: Array.from($(".cartao")).map(function(cartao){
                 return {
-                    conteudo: cartao.querySelector(".cartao-conteudo").textContent
+                    conteudo: cartao.querySelector(".cartao-conteudo").textContent + "!#direcao#!" + (document.querySelector(".mural").classList.contains("muralLinhas") ? "row" : "column")
                     ,cor: getComputedStyle(cartao).getPropertyValue("background-color")
-                    ,disposicao: document.querySelector(".mural").classList.contains("muralLinhas")
                 }
             })
         }

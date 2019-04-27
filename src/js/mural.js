@@ -102,7 +102,18 @@ $.ajax({
     ,success: function(objeto){
         const cartoes = objeto.cartoes;
         cartoes.forEach(function(cartao){
+            var direcao = cartao.conteudo.split("!#direcao#!")[1];
+            cartao.conteudo = cartao.conteudo.split("!#direcao#!")[0];
             adicionaCartaoNoMural(cartao);
+            if (direcao == "row"){
+                document.querySelector(".mural").classList.remove("muralColunas");
+                document.querySelector(".mural").classList.add("muralLinhas");
+                document.querySelector("#btnMudaLayout").innerHTML = "Colunas";
+            }else{
+                document.querySelector(".mural").classList.remove("muralLinhas");
+                document.querySelector(".mural").classList.add("muralColunas");
+                document.querySelector("#btnMudaLayout").innerHTML = "Linhas";
+            }
         })
     }
 });
